@@ -1,7 +1,7 @@
 /*
-Copyright 2014, modulex-editor@1.0.1
+Copyright 2015, modulex-editor@1.0.5
 MIT Licensed
-build time: Thu, 16 Oct 2014 08:12:53 GMT
+build time: Wed, 19 Aug 2015 03:24:54 GMT
 */
 modulex.add("editor", ["html-parser","ua","node","util","xtemplate/runtime","component/control","dom"], function(require, exports, module) {
 var htmlParser = require("html-parser");
@@ -36,7 +36,7 @@ editor/z-index-manager
 */
 var editorXtplIframe, editorXtplMain, editorHtmlDataProcessor, editorXtplIframeRender, editorXtplMainRender, editorBase, editorUtils, editorFocusManager, editorWalker, editorElementPath, editorEnterKey, editorZIndexManager, editorRange, editorSelection, editorSelectionFix, editorStyles, editorDomIterator, editorClipboard, _editor_, _editorDom_;
 editorXtplIframe = function (exports) {
-  /*compiled by xtemplate#3.3.1*/
+  /*compiled by xtemplate#3.7.1*/
   var ret = exports = function iframe(undefined) {
     var t;
     var t0;
@@ -75,38 +75,38 @@ editorXtplIframe = function (exports) {
     var blockCommand = nativeCommands['block'];
     var macroCommand = nativeCommands['macro'];
     var debuggerCommand = nativeCommands['debugger'];
-    buffer.data += '<!doctype html>\r\n<html>\r\n<head>';
+    buffer.data += '<!doctype html>\n<html>\n<head>';
     pos.line = 3;
     var id0 = (t = affix.doctype) !== undefined ? t : (t = data.doctype) !== undefined ? t : scope.resolveLooseUp(['doctype']);
     buffer = buffer.write(id0);
-    buffer.data += '\r\n    <title>';
+    buffer.data += '\n    <title>';
     pos.line = 4;
     var id1 = (t = affix.title) !== undefined ? t : (t = data.title) !== undefined ? t : scope.resolveLooseUp(['title']);
     buffer = buffer.write(id1);
-    buffer.data += '</title>\r\n    ';
+    buffer.data += '</title>\n    ';
     pos.line = 5;
     var id2 = (t = affix.style) !== undefined ? t : (t = data.style) !== undefined ? t : scope.resolveLooseUp(['style']);
     buffer = buffer.write(id2);
-    buffer.data += '\r\n    ';
+    buffer.data += '\n    ';
     pos.line = 6;
     var id3 = (t = affix.links) !== undefined ? t : (t = data.links) !== undefined ? t : scope.resolveLooseUp(['links']);
     buffer = buffer.write(id3);
-    buffer.data += '\r\n    </head> \r\n<body class="ks-editor">\r\n';
+    buffer.data += '\n    </head> \n<body class="ks-editor">\n';
     pos.line = 9;
     var id4 = (t = affix.data) !== undefined ? t : (t = data.data) !== undefined ? t : scope.resolveLooseUp(['data']);
     buffer = buffer.write(id4);
-    buffer.data += '\r\n';
+    buffer.data += '\n';
     pos.line = 10;
     var id5 = (t = affix.script) !== undefined ? t : (t = data.script) !== undefined ? t : scope.resolveLooseUp(['script']);
     buffer = buffer.write(id5);
-    buffer.data += '\r\n</body> \r\n</html>';
+    buffer.data += '\n</body> \n</html>';
     return buffer;
   };
   ret.TPL_NAME = module.id || module.name;
   return exports;
 }();
 editorXtplMain = function (exports) {
-  /*compiled by xtemplate#3.3.1*/
+  /*compiled by xtemplate#3.7.1*/
   var ret = exports = function main(undefined) {
     var t;
     var t0;
@@ -148,49 +148,49 @@ editorXtplMain = function (exports) {
     function func2(scope, buffer, undefined) {
       var data = scope.data;
       var affix = scope.affix;
-      buffer.data += '\r\nstyle="overflow:scroll;-webkit-overflow-scrolling:touch;"\r\n';
+      buffer.data += '\nstyle="overflow:scroll;-webkit-overflow-scrolling:touch;"\n';
       return buffer;
     }
     function func5(scope, buffer, undefined) {
       var data = scope.data;
       var affix = scope.affix;
-      buffer.data += '\r\n';
+      buffer.data += '\n';
       pos.line = 20;
       var id6 = (t = affix.xindex) !== undefined ? t : (t = data.xindex) !== undefined ? t : scope.resolveLooseUp(['xindex']);
       buffer = buffer.writeEscaped(id6);
       buffer.data += '="';
       var id7 = data;
       buffer = buffer.writeEscaped(id7);
-      buffer.data += '"\r\n';
+      buffer.data += '"\n';
       return buffer;
     }
     function func9(scope, buffer, undefined) {
       var data = scope.data;
       var affix = scope.affix;
-      buffer.data += '\r\nstyle="display:none"\r\n';
+      buffer.data += '\nstyle="display:none"\n';
       return buffer;
     }
     buffer.data += '<div class="';
     pos.line = 1;
     var id0 = (t = affix.prefixCls) !== undefined ? t : (t = data.prefixCls) !== undefined ? t : scope.resolveLooseUp(['prefixCls']);
     buffer = buffer.writeEscaped(id0);
-    buffer.data += 'editor-tools">\r\n\r\n</div>\r\n\r\n';
-    buffer.data += '\r\n\r\n<div class="';
+    buffer.data += 'editor-tools">\n\n</div>\n\n';
+    buffer.data += '\n\n<div class="';
     pos.line = 10;
     var id1 = (t = affix.prefixCls) !== undefined ? t : (t = data.prefixCls) !== undefined ? t : scope.resolveLooseUp(['prefixCls']);
     buffer = buffer.writeEscaped(id1);
-    buffer.data += 'editor-textarea-wrap"\r\n\r\n';
+    buffer.data += 'editor-textarea-wrap"\n\n';
     pos.line = 12;
     var id3 = (t = affix.mobile) !== undefined ? t : (t = data.mobile) !== undefined ? t : scope.resolveLooseUp(['mobile']);
     buffer = ifCommand.call(tpl, scope, {
       params: [id3],
       fn: func2
     }, buffer);
-    buffer.data += '\r\n>\r\n\r\n<textarea class="';
+    buffer.data += '\n>\n\n<textarea class="';
     pos.line = 17;
     var id4 = (t = affix.prefixCls) !== undefined ? t : (t = data.prefixCls) !== undefined ? t : scope.resolveLooseUp(['prefixCls']);
     buffer = buffer.writeEscaped(id4);
-    buffer.data += 'editor-textarea"\r\n\r\n';
+    buffer.data += 'editor-textarea"\n\n';
     pos.line = 19;
     pos.line = 19;
     var id8 = (t = affix.textareaAttrs) !== undefined ? t : (t = data.textareaAttrs) !== undefined ? t : scope.resolveLooseUp(['textareaAttrs']);
@@ -198,22 +198,22 @@ editorXtplMain = function (exports) {
       params: [id8],
       fn: func5
     }, buffer);
-    buffer.data += '\r\n\r\n';
+    buffer.data += '\n\n';
     pos.line = 23;
     var id10 = (t = affix.mode) !== undefined ? t : (t = data.mode) !== undefined ? t : scope.resolveLooseUp(['mode']);
     buffer = ifCommand.call(tpl, scope, {
       params: [id10],
       fn: func9
     }, buffer);
-    buffer.data += '\r\n\r\n>';
+    buffer.data += '\n\n>';
     pos.line = 27;
     var id11 = (t = affix.data) !== undefined ? t : (t = data.data) !== undefined ? t : scope.resolveLooseUp(['data']);
     buffer = buffer.writeEscaped(id11);
-    buffer.data += '</textarea>\r\n\r\n</div>\r\n\r\n<div class="';
+    buffer.data += '</textarea>\n\n</div>\n\n<div class="';
     pos.line = 31;
     var id12 = (t = affix.prefixCls) !== undefined ? t : (t = data.prefixCls) !== undefined ? t : scope.resolveLooseUp(['prefixCls']);
     buffer = buffer.writeEscaped(id12);
-    buffer.data += 'editor-status">\r\n\r\n</div>\r\n';
+    buffer.data += 'editor-status">\n\n</div>\n';
     return buffer;
   };
   ret.TPL_NAME = module.id || module.name;
@@ -4866,7 +4866,7 @@ _editor_ = function (exports) {
   var selectionFix = editorSelectionFix;
   exports = Editor;
   var TRUE = true, FALSE = false, NULL = null, UA = ua, IS_IE = UA.ieMode < 11, NodeType = $.Dom.NodeType, HEIGHT = 'height', tryThese = Utils.tryThese, IFRAME_TPL = '<iframe' + ' class="{prefixCls}editor-iframe"' + ' frameborder="0" ' + ' title="kissy-editor" ' + ' allowTransparency="true" ' + ' {iframeSrc} ' + '>' + '</iframe>', EMPTY_CONTENT_REG = /^(?:<(p)>)?(?:(?:&nbsp;)|\s|<br[^>]*>)*(?:<\/\1>)?$/i;
-  Editor.version = '1.0.1';
+  Editor.version = '1.0.5';
   Editor.Mode = {
     SOURCE_MODE: 0,
     WYSIWYG_MODE: 1

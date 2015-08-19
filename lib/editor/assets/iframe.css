@@ -130,16 +130,6 @@ fieldset, img {
     border: 0;
 }
 
-/*
-do not need to specify
-switch to default
-*/
-table.k-e-collapse-table {
-    display: table;
-    border-color: black;
-    border-collapse: collapse;
-}
-
 table {
     /*prevent inherit for nested table*/
     border-collapse: separate;
@@ -158,14 +148,6 @@ ul, ol, dl {
 dl dd {
     /* providing spacing for definition terms */
     margin-left: 1em;
-}
-
-table.k-e-collapse-table >tbody>tr>th,
-table.k-e-collapse-table >tbody>tr>td {
-    /* padding to make the table readable */
-    /*padding: .5em;*/
-    /*th,td no need to specify ? inherit from table ?*/
-    border-color: black;
 }
 
 th {
@@ -190,49 +172,9 @@ ul, ol {
     padding-left: 40px;
 }
 
-/*
-业务调用方自己设置
-img {
-    vertical-align:middle;
-}
-*/
-img.ke_flash, img.ke_video, img.ke_music, img.ke_xiami {
-    background: url("placeholder_flash.png") center center no-repeat;
-    border: 1px solid #A9A9A9;
-    height: 80px;
-    width: 80px;
-}
-
-img.ke_video {
-    background-image: url("placeholder_video.png");
-}
-
-img.ke_xiami {
-    background-image: url("placeholder_xiami.png");
-}
-
 /*firefox 破碎图片手动定义才出现*/
 img:-moz-broken {
     -moz-force-broken-image-icon: 1;
     height: 24px;
     width: 24px;
-}
-
-img.ke_pagebreak {
-    background: url("pagebreak.gif") center center no-repeat;
-    border-bottom: 1px dotted #999999;
-    border-top: 1px dotted #999999;
-    clear: both;
-    display: block;
-    float: none;
-    height: 5px !important;
-    page-break-after: always;
-    width: 100% !important;
-}
-
-pre.ks-editor-code {
-    display: block;
-    margin-right: 2em;
-    border-left: 3px solid #CCC;
-    padding: 0 1em;
 }
